@@ -1,7 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="visualized_neural_network.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NetworksPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\Visualized Neural Network\Networks\</Value>
+    </Setting>
+    <Setting Name="DataSetsPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\Visualized Neural Network\DataSets\</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

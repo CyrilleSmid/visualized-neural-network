@@ -7,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using visualized_neural_network.Models.NeuralNetworkAlgorithm;
 
 namespace visualized_neural_network.Controls.FormMainControls
 {
-    public partial class NeuralNetworkPage : UserControl
+    public partial class SettingsPage : UserControl
     {
-        public NeuralNetworkPage()
+        public SettingsPage()
         {
             InitializeComponent();
-
-            NeuralNetwork network = new NeuralNetwork("Test.csv");
         }
     }
 }
