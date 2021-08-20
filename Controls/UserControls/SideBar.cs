@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace visualized_neural_network.Controls.UserControls
 {
@@ -45,6 +46,7 @@ namespace visualized_neural_network.Controls.UserControls
                 OpenPage((int)button.Tag);
             }
 
+            Debug.WriteLine("Initialized \"" + pageName + "\" page");
         }
 
         private void SetButtonStyle(Button button, string pageName, Image pageImage)
@@ -97,6 +99,8 @@ namespace visualized_neural_network.Controls.UserControls
         {
             HighlightButton((Button)sender);
             OpenPage((int)((Button)sender).Tag);
+
+            Debug.WriteLine("Opened \"" + ((Button)sender).Text + "\" page");
         }
 
         int activePageIndex = -1;
