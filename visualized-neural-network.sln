@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "visualized-neural-network", "visualized-neural-network.csproj", "{E5D29DBE-5CD3-4EB2-B4A2-C65223AB14B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "visualized_neural_network", "visualized_neural_network.csproj", "{E5D29DBE-5CD3-4EB2-B4A2-C65223AB14B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

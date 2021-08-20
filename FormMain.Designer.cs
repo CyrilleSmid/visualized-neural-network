@@ -34,15 +34,19 @@ namespace visualized_neural_network
             this.labelTitle = new System.Windows.Forms.Label();
             this.pictureBoxProjectLogo = new System.Windows.Forms.PictureBox();
             this.panelControlHolder = new System.Windows.Forms.Panel();
+            this.panelPageHolder = new System.Windows.Forms.Panel();
+            this.sideBar = new visualized_neural_network.Controls.UserControls.SideBar();
             this.topBar = new visualized_neural_network.Controls.UserControls.TopBar();
             this.panelSide.SuspendLayout();
             this.panelSideTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProjectLogo)).BeginInit();
+            this.panelControlHolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.panelSide.Controls.Add(this.sideBar);
             this.panelSide.Controls.Add(this.panelSideTitle);
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 30);
@@ -65,7 +69,7 @@ namespace visualized_neural_network
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(240)))));
-            this.labelTitle.Location = new System.Drawing.Point(12, 91);
+            this.labelTitle.Location = new System.Drawing.Point(12, 95);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelTitle.Size = new System.Drawing.Size(217, 26);
@@ -86,11 +90,30 @@ namespace visualized_neural_network
             // 
             // panelControlHolder
             // 
+            this.panelControlHolder.Controls.Add(this.panelPageHolder);
             this.panelControlHolder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControlHolder.Location = new System.Drawing.Point(240, 30);
             this.panelControlHolder.Name = "panelControlHolder";
             this.panelControlHolder.Size = new System.Drawing.Size(800, 570);
             this.panelControlHolder.TabIndex = 4;
+            // 
+            // panelPageHolder
+            // 
+            this.panelPageHolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPageHolder.Location = new System.Drawing.Point(0, 0);
+            this.panelPageHolder.Name = "panelPageHolder";
+            this.panelPageHolder.Size = new System.Drawing.Size(800, 570);
+            this.panelPageHolder.TabIndex = 0;
+            // 
+            // sideBar
+            // 
+            this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.sideBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideBar.Location = new System.Drawing.Point(0, 140);
+            this.sideBar.Margin = new System.Windows.Forms.Padding(0);
+            this.sideBar.Name = "sideBar";
+            this.sideBar.Size = new System.Drawing.Size(240, 430);
+            this.sideBar.TabIndex = 1;
             // 
             // topBar
             // 
@@ -118,6 +141,7 @@ namespace visualized_neural_network
             this.panelSideTitle.ResumeLayout(false);
             this.panelSideTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProjectLogo)).EndInit();
+            this.panelControlHolder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -130,6 +154,8 @@ namespace visualized_neural_network
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.PictureBox pictureBoxProjectLogo;
         private System.Windows.Forms.Panel panelControlHolder;
+        private System.Windows.Forms.Panel panelPageHolder;
+        private Controls.UserControls.SideBar sideBar;
     }
 }
 
