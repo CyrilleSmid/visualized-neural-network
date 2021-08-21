@@ -1,5 +1,5 @@
 ﻿
-namespace visualized_neural_network
+namespace VisualizedNeuralNetwork
 {
     partial class FormMain
     {
@@ -35,8 +35,8 @@ namespace visualized_neural_network
             this.pictureBoxProjectLogo = new System.Windows.Forms.PictureBox();
             this.panelControlHolder = new System.Windows.Forms.Panel();
             this.panelPageHolder = new System.Windows.Forms.Panel();
-            this.sideBar = new visualized_neural_network.Controls.UserControls.SideBar();
-            this.topBar = new visualized_neural_network.Controls.UserControls.TopBar();
+            this.sideBar = new VisualizedNeuralNetwork.Controls.UserControls.SideBar();
+            this.topBar = new VisualizedNeuralNetwork.Controls.UserControls.TopBar();
             this.panelSide.SuspendLayout();
             this.panelSideTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProjectLogo)).BeginInit();
@@ -80,7 +80,7 @@ namespace visualized_neural_network
             // pictureBoxProjectLogo
             // 
             this.pictureBoxProjectLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxProjectLogo.Image = global::visualized_neural_network.Properties.Resources.project_icon_network;
+            this.pictureBoxProjectLogo.Image = global::VisualizedNeuralNetwork.Properties.Resources.project_icon_network;
             this.pictureBoxProjectLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxProjectLogo.Name = "pictureBoxProjectLogo";
             this.pictureBoxProjectLogo.Size = new System.Drawing.Size(240, 100);

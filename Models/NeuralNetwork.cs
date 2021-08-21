@@ -7,7 +7,7 @@ using Microsoft.VisualBasic.FileIO;
 using System.IO;
 using System.Diagnostics;
 
-namespace visualized_neural_network.Models.NeuralNetworkAlgorithm
+namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
 {
     class NeuralNetwork
     {
@@ -31,7 +31,7 @@ namespace visualized_neural_network.Models.NeuralNetworkAlgorithm
         {
             networkFilePath =
                 Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
-                visualized_neural_network.Properties.Settings.Default.NetworksPath +
+                VisualizedNeuralNetwork.Properties.Settings.Default.NetworksPath +
                 fileName;
 
             using (var parser = new TextFieldParser(networkFilePath))
@@ -96,7 +96,7 @@ namespace visualized_neural_network.Models.NeuralNetworkAlgorithm
 
             string filePath = Path.Combine(
                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                   visualized_neural_network.Properties.Settings.Default.NetworksPath,
+                   VisualizedNeuralNetwork.Properties.Settings.Default.NetworksPath,
                    "\\" + fileName);
 
             var networkStracture = new List<int>();
@@ -148,12 +148,12 @@ namespace visualized_neural_network.Models.NeuralNetworkAlgorithm
         {
             trainingDataSetFilePath = Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                visualized_neural_network.Properties.Settings.Default.DataSetsPath,
+                VisualizedNeuralNetwork.Properties.Settings.Default.DataSetsPath,
                 "\\" + trainingDataSetFileName);
 
             testingDataSetFilePath = Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                visualized_neural_network.Properties.Settings.Default.DataSetsPath,
+                VisualizedNeuralNetwork.Properties.Settings.Default.DataSetsPath,
                 "\\" + trainingDataSetFileName);
 
             int lastLayerIndex = neuralLayers.Length - 1;

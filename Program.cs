@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace visualized_neural_network
+namespace VisualizedNeuralNetwork
 {
     static class Program
     {

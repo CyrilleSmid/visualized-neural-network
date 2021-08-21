@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace visualized_neural_network.Controls.FormMainControls
+namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
     public partial class SettingsPage : UserControl
     {

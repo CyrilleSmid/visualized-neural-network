@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using visualized_neural_network.Controls.FormMainControls;
+using VisualizedNeuralNetwork.Controls.FormMainControls;
 
-namespace visualized_neural_network
+namespace VisualizedNeuralNetwork
 {
     public partial class FormMain : Form
     {

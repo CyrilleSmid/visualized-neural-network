@@ -1,5 +1,5 @@
 ﻿
-namespace visualized_neural_network.Controls.FormMainControls
+namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
     partial class SettingsPage
     {

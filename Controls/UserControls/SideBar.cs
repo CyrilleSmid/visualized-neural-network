@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace visualized_neural_network.Controls.UserControls
+namespace VisualizedNeuralNetwork.Controls.UserControls
 {
     public partial class SideBar : UserControl
     {

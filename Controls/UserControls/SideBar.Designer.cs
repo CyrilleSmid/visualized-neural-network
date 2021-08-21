@@ -1,5 +1,5 @@
 ﻿
-namespace visualized_neural_network.Controls.UserControls
+namespace VisualizedNeuralNetwork.Controls.UserControls
 {
     partial class SideBar
     {

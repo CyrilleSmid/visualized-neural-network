@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace visualized_neural_network.Properties {
+namespace VisualizedNeuralNetwork.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
