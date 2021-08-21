@@ -11,7 +11,6 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
 {
     class NeuralNetwork
     {
-        private int outputLayerIndex = 0;
         private float[] inputLayer;
         private Neuron[][] neuralLayers;
 
@@ -83,10 +82,10 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
                     }
                 }
             }
-            Debug.WriteLine("Info: Network successfully initalized");
+            Debug.WriteLine("Info: Network \"" + fileName + "\" has been successfully opened");
         }
 
-        public static void initializeAndSaveNetwork(
+        public static void InitializeAndSaveNetwork(
             string fileName,
             int numInputNeurons,
             int numOutputNeurons,
@@ -94,10 +93,10 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
         {
             // TODO: alert if file exists and will be erased
 
-            string filePath = Path.Combine(
-                   Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                   VisualizedNeuralNetwork.Properties.Settings.Default.NetworksPath,
-                   "\\" + fileName);
+            string filePath = 
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+                VisualizedNeuralNetwork.Properties.Settings.Default.NetworksPath +
+                fileName;
 
             var networkStracture = new List<int>();
             networkStracture.AddRange(hiddenLayerSizes);
@@ -138,23 +137,25 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
                     }
                 }
             }
+
+            Debug.WriteLine("Info: New network \"" + fileName + "\" has been created");
         }
-        public void trainNetwork(
+        public void TrainNetwork(
             string trainingDataSetFileName,
             string testingDataSetFileName,
             int epochNum,
             float learningRate = 0.2f,
             string delimChar = ",")
         {
-            trainingDataSetFilePath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                VisualizedNeuralNetwork.Properties.Settings.Default.DataSetsPath,
-                "\\" + trainingDataSetFileName);
+            trainingDataSetFilePath = 
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+                VisualizedNeuralNetwork.Properties.Settings.Default.DataSetsPath +
+                trainingDataSetFileName;
 
-            testingDataSetFilePath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                VisualizedNeuralNetwork.Properties.Settings.Default.DataSetsPath,
-                "\\" + trainingDataSetFileName);
+            testingDataSetFilePath = 
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+                VisualizedNeuralNetwork.Properties.Settings.Default.DataSetsPath +
+                trainingDataSetFileName;
 
             int lastLayerIndex = neuralLayers.Length - 1;
             float[] expected = new float[neuralLayers[lastLayerIndex].Length];
@@ -177,25 +178,25 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
                     {
                         string[] fields = parser.ReadFields();
 
-                        int expectedOutputIndex = assignInputsReturnExpectedIndex(fields);
+                        int expectedOutputIndex = AssignInputsReturnExpectedIndex(fields);
                         if (expectedOutputIndex != -1 && expected.Length >= expectedOutputIndex)
                         {
                             expected[expectedOutputIndex] = 1;
                         }
                         else throw fileFormatEx;
 
-                        forwardPropagate();
-                        sumError += calculateErrorSum(expected);
-                        backwardPropagateErrors(expected);
-                        updateWeights(learningRate);
+                        ForwardPropagate();
+                        sumError += CalculateErrorSum(expected);
+                        BackwardPropagateErrors(expected);
+                        UpdateWeights(learningRate);
 
                         dataExampleCount++;
                     }
                     float averageError = 0;
                     if (dataExampleCount != 0) averageError = sumError / dataExampleCount;  // TODO: display averageError
-                    float testRunSuccessRate = runTestingDataSet() * 100;
+                    float testRunSuccessRate = RunTestingDataSet() * 100;
 
-                    Debug.WriteLine("Error: {0}\tTest success rate: {1}%\tExamples: {2}", averageError, testRunSuccessRate, dataExampleCount);
+                    Debug.WriteLine("Error: {0}\tTest success rate: {1}%", averageError, testRunSuccessRate);
                 }
             }
         }
@@ -205,7 +206,7 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
 
         //  }
 
-        private float runTestingDataSet(string delimChar = ",")
+        private float RunTestingDataSet(string delimChar = ",")
         {
             int correctResultCount = 0;
             int dataExampleCount = 0;
@@ -222,10 +223,10 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
                 {
                     string[] fields = parser.ReadFields();
 
-                    int expectedOutputIndex = assignInputsReturnExpectedIndex(fields);
-                    forwardPropagate();
+                    int expectedOutputIndex = AssignInputsReturnExpectedIndex(fields);
+                    ForwardPropagate();
 
-                    if (getResultIndex() == expectedOutputIndex)
+                    if (GetResultIndex() == expectedOutputIndex)
                     {
                         correctResultCount++;
                     }
@@ -236,7 +237,7 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
             else return 0;
         }
 
-        private int assignInputsReturnExpectedIndex(string[] fields)
+        private int AssignInputsReturnExpectedIndex(string[] fields)
         {
             int expectedIndex = -1;
             if (fields.Length == inputLayer.Length + 1)
@@ -255,7 +256,7 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
             return expectedIndex;
         }
 
-        private int getResultIndex()
+        private int GetResultIndex()
         {
             int maxElIndex = -1;
             float maxEl = -1;
@@ -271,7 +272,7 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
             return maxElIndex;
         }
 
-        private void forwardPropagate()
+        private void ForwardPropagate()
         {
             for (int layerIndex = 0; layerIndex < neuralLayers.Length; layerIndex++)
             {
@@ -295,7 +296,7 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
             }
 
         }
-        private float calculateErrorSum(float[] expected)
+        private float CalculateErrorSum(float[] expected)
         {
             float errorSum = 0;
             int lastLayerIndex = neuralLayers.Length - 1;
@@ -306,7 +307,7 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
             }
             return errorSum;
         }
-        private void backwardPropagateErrors(float[] expected)
+        private void BackwardPropagateErrors(float[] expected)
         {
             int lastLayerIndex = neuralLayers.Length - 1;
             if (expected.Length == neuralLayers[lastLayerIndex].Length)
@@ -350,7 +351,7 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
             }
 
         }
-        private void updateWeights(float learningRate)
+        private void UpdateWeights(float learningRate)
         {
             for (int layerIndex = 0; layerIndex < neuralLayers.Length; layerIndex++)
             {
