@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VisualizedNeuralNetwork.Controls.FormMainControls;
+using VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm;
 
 namespace VisualizedNeuralNetwork
 {
@@ -23,8 +24,6 @@ namespace VisualizedNeuralNetwork
                 Properties.Resources.data_set, panelPageHolder);
             sideBar.AddPage(new SettingsPage(), "Settings", // TODO: change page
                 Properties.Resources.settings, panelPageHolder, true);
-
-
         }
     }
 }

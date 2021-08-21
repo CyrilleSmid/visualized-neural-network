@@ -38,6 +38,7 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(62)))));
             this.Name = "NeuralNetworkPage";
             this.Size = new System.Drawing.Size(800, 570);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.NeuralNetworkPage_Paint);
             this.ResumeLayout(false);
 
         }
