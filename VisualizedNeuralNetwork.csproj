@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E5D29DBE-5CD3-4EB2-B4A2-C65223AB14B7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>visualized_neural_network</RootNamespace>
-    <AssemblyName>visualized-neural-network</AssemblyName>
+    <RootNamespace>VisualizedNeuralNetwork</RootNamespace>
+    <AssemblyName>VisualizedNeuralNetwork</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\FormMainControls\DataSetSelectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FormMainControls\DataSetSelectionPage.Designer.cs">
+      <DependentUpon>DataSetSelectionPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FormMainControls\NeuralNetworkPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\FormMainControls\NeuralNetworkPage.Designer.cs">
       <DependentUpon>NeuralNetworkPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormMainControls\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FormMainControls\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\UserControls\SideBar.cs">
       <SubType>UserControl</SubType>
@@ -70,10 +83,17 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\NeuralNetwork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\FormMainControls\DataSetSelectionPage.resx">
+      <DependentUpon>DataSetSelectionPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\FormMainControls\NeuralNetworkPage.resx">
       <DependentUpon>NeuralNetworkPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormMainControls\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UserControls\SideBar.resx">
       <DependentUpon>SideBar.cs</DependentUpon>

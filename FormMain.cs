@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using visualized_neural_network.Controls.FormMainControls;
+using VisualizedNeuralNetwork.Controls.FormMainControls;
 
-namespace visualized_neural_network
+namespace VisualizedNeuralNetwork
 {
     public partial class FormMain : Form
     {
@@ -19,10 +19,12 @@ namespace visualized_neural_network
 
             sideBar.AddPage(new NeuralNetworkPage(), "Neural Network", 
                 Properties.Resources.network, panelPageHolder);
-            sideBar.AddPage(new NeuralNetworkPage(), "Data Set", // TODO: change page
+            sideBar.AddPage(new DataSetSelectionPage(), "Data Set", // TODO: change page
                 Properties.Resources.data_set, panelPageHolder);
-            sideBar.AddPage(new NeuralNetworkPage(), "Settings", // TODO: change page
+            sideBar.AddPage(new SettingsPage(), "Settings", // TODO: change page
                 Properties.Resources.settings, panelPageHolder, true);
+
+
         }
     }
 }

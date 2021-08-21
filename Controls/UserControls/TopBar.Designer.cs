@@ -1,5 +1,5 @@
 ﻿
-namespace visualized_neural_network.Controls.UserControls
+namespace VisualizedNeuralNetwork.Controls.UserControls
 {
     partial class TopBar
     {
@@ -38,7 +38,7 @@ namespace visualized_neural_network.Controls.UserControls
             this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Image = global::visualized_neural_network.Properties.Resources.cross;
+            this.buttonClose.Image = global::VisualizedNeuralNetwork.Properties.Resources.cross;
             this.buttonClose.Location = new System.Drawing.Point(1010, 0);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(30, 30);
@@ -51,7 +51,7 @@ namespace visualized_neural_network.Controls.UserControls
             this.buttonMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonMinimize.FlatAppearance.BorderSize = 0;
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimize.Image = global::visualized_neural_network.Properties.Resources.minimize;
+            this.buttonMinimize.Image = global::VisualizedNeuralNetwork.Properties.Resources.minimize;
             this.buttonMinimize.Location = new System.Drawing.Point(980, 0);
             this.buttonMinimize.Name = "buttonMinimize";
             this.buttonMinimize.Size = new System.Drawing.Size(30, 30);

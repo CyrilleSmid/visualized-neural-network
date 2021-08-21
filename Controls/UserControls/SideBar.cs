@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace visualized_neural_network.Controls.UserControls
+namespace VisualizedNeuralNetwork.Controls.UserControls
 {
     public partial class SideBar : UserControl
     {
