@@ -95,15 +95,18 @@ namespace VisualizedNeuralNetwork.Controls.UserControls
 
         }
 
+        int activePageIndex = -1;
         private void ButtonClicked(object sender, EventArgs e)
         {
-            HighlightButton((Button)sender);
-            OpenPage((int)((Button)sender).Tag);
+            if (activePageIndex != (int)((Button)sender).Tag)
+            {
+                HighlightButton((Button)sender);
+                OpenPage((int)((Button)sender).Tag);
 
-            Debug.WriteLine("Opened \"" + ((Button)sender).Text + "\" page");
+                Debug.WriteLine("Opened \"" + ((Button)sender).Text + "\" page");
+            }
         }
-
-        int activePageIndex = -1;
+        
         private void OpenPage(int pageIndex)
         {
             if (activePageIndex != -1)

@@ -8,34 +8,57 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm;
+using System.Diagnostics;
 
 namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
     public partial class NeuralNetworkPage : UserControl
     {
+        NeuralNetwork network;
         public NeuralNetworkPage()
         {
             InitializeComponent();
-            NeuralNetwork.InitializeAndSaveNetwork("Test.csv", 3, 13, new List<int>(new int[] { 3, 13, 13}));
-            NeuralNetwork network = new NeuralNetwork("Test.csv");
-            network.TrainNetwork("training_data_set.csv", "testing_data_set.csv", 30);
+
+            NeuralNetwork.InitializeAndSaveNetwork("Test.csv", 3, 13, new List<int>(new int[] { 6, 10, 13 }));
+            network = new NeuralNetwork("Test.csv");
         }
 
-        
-        private void NeuralNetworkPage_Paint(object sender, PaintEventArgs e)
+        private const int drawingStartingPosX = 60;
+        private const int drawingStartingPosY = 20;
+        private const int drawingNextColumnShift = 60;
+        private const int drawingNextRowShift = 30;
+        private const int drawingCircleDiameter = 20;
+
+        private void panelNetworkVisualizationWindow_Paint(object sender, PaintEventArgs e)
         {
-            var graphics = e.Graphics;
-            var pen = new Pen(Color.FromArgb(36, 38, 39), 4);
-            var brush = new SolidBrush(Color.FromArgb(67, 72, 75));
-            for (int i = 0; i < 3; i++)
+            using (var graphics = e.Graphics)
             {
-                for (int j = 0; j < 13; j++)
+                graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+                var pen = new Pen(Color.FromArgb(36, 38, 39), 4);
+                var brush = new SolidBrush(Color.FromArgb(67, 72, 75));
+                for (int layerIndex = 0; layerIndex < network.NetworkStracture.Length; layerIndex++)
                 {
-                    graphics.FillEllipse(brush, 50 + i * 60, 50 + j * 30, 20, 20);
-                    graphics.DrawEllipse(pen, 50 + i * 60, 50 + j * 30, 20, 20);
+                    for (int neuronIndex = 0; neuronIndex < network.NetworkStracture.LayerLength(layerIndex); neuronIndex++)
+                    {
+                        int neuronPosX = drawingStartingPosX + layerIndex * drawingNextColumnShift;
+                        int neuronPosY = drawingStartingPosY + neuronIndex * drawingNextRowShift;
+
+                        graphics.FillEllipse(
+                            brush, 
+                            neuronPosX, 
+                            neuronPosY,
+                            drawingCircleDiameter,
+                            drawingCircleDiameter);
+
+                        graphics.DrawEllipse(
+                            pen,
+                            neuronPosX,
+                            neuronPosY,
+                            drawingCircleDiameter,
+                            drawingCircleDiameter);
+                    }
                 }
             }
-            graphics.Dispose();
         }
     }
 }

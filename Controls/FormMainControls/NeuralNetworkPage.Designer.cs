@@ -29,20 +29,34 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelNetworkVisualizationWindow = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // panelNetworkVisualizationWindow
+            // 
+            this.panelNetworkVisualizationWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.panelNetworkVisualizationWindow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelNetworkVisualizationWindow.Location = new System.Drawing.Point(30, 30);
+            this.panelNetworkVisualizationWindow.Name = "panelNetworkVisualizationWindow";
+            this.panelNetworkVisualizationWindow.Size = new System.Drawing.Size(740, 420);
+            this.panelNetworkVisualizationWindow.TabIndex = 0;
+            this.panelNetworkVisualizationWindow.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNetworkVisualizationWindow_Paint);
             // 
             // NeuralNetworkPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(62)))));
+            this.Controls.Add(this.panelNetworkVisualizationWindow);
             this.Name = "NeuralNetworkPage";
+            this.Padding = new System.Windows.Forms.Padding(30);
             this.Size = new System.Drawing.Size(800, 570);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.NeuralNetworkPage_Paint);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panelNetworkVisualizationWindow;
     }
 }

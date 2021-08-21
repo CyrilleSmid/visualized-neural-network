@@ -13,13 +13,22 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
     {
         private float[] inputLayer;
         private Neuron[][] neuralLayers;
+        public NetworkStractureIndexer NetworkStracture { get { return networkStracture; } }
 
         private string networkFilePath;
         private string trainingDataSetFilePath;
         private string testingDataSetFilePath;
 
-        private struct Neuron
+        public struct Neuron
         {
+            public Neuron(float value)
+            {
+                this.value = value;
+                bias = 0f;
+                error = 0f;
+                weights = new float[0];
+            }
+
             public float value;
             public float bias;
             public float error;
@@ -28,6 +37,8 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
 
         public NeuralNetwork(string fileName, string delimChar = ",")
         {
+            networkStracture = new NetworkStractureIndexer(this);
+
             networkFilePath =
                 Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
                 VisualizedNeuralNetwork.Properties.Settings.Default.NetworksPath +
@@ -374,5 +385,44 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
             }
         }
         private Exception fileFormatEx = new Exception("Incorrect data set file format or network structure");
+
+        private NetworkStractureIndexer networkStracture;
+        public class NetworkStractureIndexer
+        {
+            private NeuralNetwork arrayOwner;
+
+            public NetworkStractureIndexer(NeuralNetwork arrayOwner)
+            {
+                this.arrayOwner = arrayOwner;
+            }
+
+            public Neuron this[int layerIndex, int neuronIndex]
+            { 
+                get
+                {
+                    if (layerIndex == 0)
+                    {
+                        return new Neuron(arrayOwner.inputLayer[neuronIndex]);
+                    }
+                    return arrayOwner.neuralLayers[layerIndex - 1][neuronIndex];
+                }
+            }
+
+            public int Length
+            {
+                get { return arrayOwner.neuralLayers.Length + 1; }
+            }
+
+            public int LayerLength(int layerIndex)
+            {
+                if (layerIndex == 0)
+                {
+                    return arrayOwner.inputLayer.Length;
+                }
+                return arrayOwner.neuralLayers[layerIndex - 1].Length;
+            }
+
+        }
+
     }
 }
