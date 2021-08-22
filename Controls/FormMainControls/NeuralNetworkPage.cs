@@ -19,13 +19,12 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
         {
             InitializeComponent();
 
-            NeuralNetwork.InitializeAndSaveNetwork("Test.csv", 3, 13, new List<int>(new int[] { 6, 10, 13 }));
+            NeuralNetwork.InitializeAndSaveNetwork("Test.csv", 3, 13, new List<int>(new int[] { 6, 10, 13}));
             network = new NeuralNetwork("Test.csv");
         }
 
-        private const int drawingStartingPosX = 60;
-        private const int drawingStartingPosY = 20;
-        private const int drawingNextColumnShift = 60;
+        private const int drawingStartingPosX = 120;
+        private const int drawingNextColumnShift = 120;
         private const int drawingNextRowShift = 30;
         private const int drawingCircleDiameter = 20;
 
@@ -34,14 +33,47 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
             using (var graphics = e.Graphics)
             {
                 graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+
                 var pen = new Pen(Color.FromArgb(36, 38, 39), 4);
                 var brush = new SolidBrush(Color.FromArgb(67, 72, 75));
+
+                List<Point> prevLayerNeuronCenterPositions = new List<Point>();
+                List<Point> curLayerNeuronCenterPositions = new List<Point>();
+
                 for (int layerIndex = 0; layerIndex < network.NetworkStracture.Length; layerIndex++)
                 {
-                    for (int neuronIndex = 0; neuronIndex < network.NetworkStracture.LayerLength(layerIndex); neuronIndex++)
+                    int neuronsCount = network.NetworkStracture.LayerLength(layerIndex);
+                    int layerHeight = drawingNextRowShift * (neuronsCount - 1) + drawingCircleDiameter;
+                    int drawingStartingPosY = (panelNetworkVisualizationWindow.Height - layerHeight) / 2;
+
+                    for (int neuronIndex = 0; neuronIndex < neuronsCount; neuronIndex++)
                     {
                         int neuronPosX = drawingStartingPosX + layerIndex * drawingNextColumnShift;
                         int neuronPosY = drawingStartingPosY + neuronIndex * drawingNextRowShift;
+                        
+                        
+
+                        curLayerNeuronCenterPositions.Add(new Point(
+                            neuronPosX + drawingCircleDiameter / 2, 
+                            neuronPosY + drawingCircleDiameter / 2));
+                        
+                        if(layerIndex != 0)
+                        {
+                            Point curNeuronCenterPos = new Point(
+                                neuronPosX + drawingCircleDiameter / 2, 
+                                neuronPosY + drawingCircleDiameter / 2);
+
+                            for (int prevNeuronIndex = 0; prevNeuronIndex < network.NetworkStracture.LayerLength(layerIndex-1); prevNeuronIndex ++)
+                            {
+                                var connectionPen = new Pen(Color.FromArgb(15, 160, 193), 1);
+
+                                graphics.DrawLine(
+                                    connectionPen,
+                                    prevLayerNeuronCenterPositions[prevNeuronIndex],
+                                    curNeuronCenterPos);
+
+                            }
+                        }
 
                         graphics.FillEllipse(
                             brush, 
@@ -50,13 +82,17 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
                             drawingCircleDiameter,
                             drawingCircleDiameter);
 
-                        graphics.DrawEllipse(
-                            pen,
-                            neuronPosX,
-                            neuronPosY,
-                            drawingCircleDiameter,
-                            drawingCircleDiameter);
+                        //graphics.DrawEllipse(
+                        //    pen,
+                        //    neuronPosX,
+                        //    neuronPosY,
+                        //    drawingCircleDiameter,
+                        //    drawingCircleDiameter);
+
+
                     }
+                    prevLayerNeuronCenterPositions = new List<Point>(curLayerNeuronCenterPositions);
+                    curLayerNeuronCenterPositions.Clear();
                 }
             }
         }
