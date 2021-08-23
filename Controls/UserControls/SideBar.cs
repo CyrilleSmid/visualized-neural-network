@@ -102,8 +102,6 @@ namespace VisualizedNeuralNetwork.Controls.UserControls
             {
                 HighlightButton((Button)sender);
                 OpenPage((int)((Button)sender).Tag);
-
-                Debug.WriteLine("Opened \"" + ((Button)sender).Text + "\" page");
             }
         }
         

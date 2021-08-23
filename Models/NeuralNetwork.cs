@@ -208,8 +208,10 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
                     float testRunSuccessRate = RunTestingDataSet() * 100;
 
                     Debug.WriteLine("Error: {0}\tTest success rate: {1}%", averageError, testRunSuccessRate);
+                    
                 }
             }
+            OnNetworkNeedsRedrawing();
         }
 
         //void saveCurrentNetwork(string saveFileName, char delimChar = ',')
@@ -384,7 +386,18 @@ namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
                 }
             }
         }
+
         private Exception fileFormatEx = new Exception("Incorrect data set file format or network structure");
+
+        public delegate void NetworkNeedsRedrawingEventHandler(object sender, EventArgs e);
+        public event NetworkNeedsRedrawingEventHandler NetworkNeedsRedrawing;
+        protected virtual void OnNetworkNeedsRedrawing()
+        {
+            if (NetworkNeedsRedrawing != null)
+            {
+                NetworkNeedsRedrawing(this, EventArgs.Empty);
+            }
+        }
 
         private NetworkStractureIndexer networkStracture;
         public class NetworkStractureIndexer
