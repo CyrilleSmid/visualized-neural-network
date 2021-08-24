@@ -29,6 +29,7 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NeuralNetworkPage));
             this.panelNetworkVisualizationWindow = new System.Windows.Forms.Panel();
             this.neuralNetworkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -51,7 +52,7 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
             this.neuralNetworkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.neuralNetworkButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neuralNetworkButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(240)))));
-            this.neuralNetworkButton.Image = global::VisualizedNeuralNetwork.Properties.Resources.train_network;
+            this.neuralNetworkButton.Image = ((System.Drawing.Image)(resources.GetObject("neuralNetworkButton.Image")));
             this.neuralNetworkButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.neuralNetworkButton.Location = new System.Drawing.Point(590, 570);
             this.neuralNetworkButton.Name = "neuralNetworkButton";

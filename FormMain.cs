@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VisualizedNeuralNetwork.Controls.FormMainControls;
-using VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm;
+using VisualizedNeuralNetwork.Classes.NeuralNetworkAlgorithm;
 
 namespace VisualizedNeuralNetwork
 {

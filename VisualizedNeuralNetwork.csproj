@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\NetworkVisualizer.cs" />
     <Compile Include="Controls\FormMainControls\DataSetSelectionPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -83,7 +84,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\NeuralNetwork.cs" />
+    <Compile Include="Classes\NeuralNetwork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\FormMainControls\DataSetSelectionPage.resx">

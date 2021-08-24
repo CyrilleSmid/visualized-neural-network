@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="neuralNetworkButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QgYCgkkz9bObgAAAmZJREFU
+        WEftls+rDWEYx8dvReF2LdhQFEVYESmkRGGhdLGw8QfYkBWhEItblncjSwtKUbK/ZXOLDa4s6JaajtvM
+        vPPOOSQcn2fOczhnzntm7px7r9V869vM+z7f59f7zjszXoUKgyIIglVJYkaMMWejKFqj0/MLkg3FcXje
+        2uhZHEffYVP5E45ju1iv19epfG5grV3bkfRHR9J+/AXH0V+h4E0aphzCMNwg3UggDehKNFO+NSa8TiNb
+        NbwbSRJss9ZcjWPz2hEky2/onnC9IcG5fwwbGY2D5g05rpFru6aVxGYE42Sv2E0ChHEcb1H3v2C5N2P/
+        mtX3I1v0gdxnPAZ+1phHHCc0Zw+wvXL55NAXp5cOQwHNU1Zhb61WW+n7/gru9+iWOLT9Se7nXrPZXM7y
+        nWPwwiWaa7KFlusj8p0m91JdvHQPd/8TRRMIo/Z4tiReQLyHnKyT0rCm7EZnAfJwIFzG0h7H8QFz021b
+        CcqzNUbcI8Raomn6I1uATqcgwCJrg/10cp+9/tLW9dJMcR2j0xP4LFb3mSGvgE4QeGGrGDNKQR/Rvyfx
+        XfHHtkBl5eEqQJ7uJAl3pIIBIC8cYuzTYT7cBUQ3ZUy3n2T5pfOiLuWN2no7Ru/U956a8pFXQDfNlBST
+        JNEhvhmr5bNsbXigtSXmc1Y/DwWUY1XArArQh6knaEneSRMUwVVAvR7upIOBX8niS4xdaYIiuAoQNBrT
+        62UZmZd/ht9tTQEnxUd8NUwxOFIbcUx/vzhWB3W6CxQ5BI9yDC+guwRvwdvwssxhO8av17DKy4OzfZhA
+        p3RYocJ/gOf9AaSKp7pm4bZAAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

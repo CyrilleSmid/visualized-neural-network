@@ -7,7 +7,7 @@ using Microsoft.VisualBasic.FileIO;
 using System.IO;
 using System.Diagnostics;
 
-namespace VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm
+namespace VisualizedNeuralNetwork.Classes.NeuralNetworkAlgorithm
 {
     class NeuralNetwork
     {
