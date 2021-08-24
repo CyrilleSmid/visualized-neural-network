@@ -51,7 +51,7 @@ namespace VisualizedNeuralNetwork
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 30);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(240, 650);
+            this.panelSide.Size = new System.Drawing.Size(240, 660);
             this.panelSide.TabIndex = 3;
             // 
             // panelSideTitle
@@ -94,7 +94,7 @@ namespace VisualizedNeuralNetwork
             this.panelControlHolder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControlHolder.Location = new System.Drawing.Point(240, 30);
             this.panelControlHolder.Name = "panelControlHolder";
-            this.panelControlHolder.Size = new System.Drawing.Size(860, 650);
+            this.panelControlHolder.Size = new System.Drawing.Size(860, 660);
             this.panelControlHolder.TabIndex = 4;
             // 
             // panelPageHolder
@@ -102,7 +102,7 @@ namespace VisualizedNeuralNetwork
             this.panelPageHolder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPageHolder.Location = new System.Drawing.Point(0, 0);
             this.panelPageHolder.Name = "panelPageHolder";
-            this.panelPageHolder.Size = new System.Drawing.Size(860, 650);
+            this.panelPageHolder.Size = new System.Drawing.Size(860, 660);
             this.panelPageHolder.TabIndex = 0;
             // 
             // sideBar
@@ -112,7 +112,7 @@ namespace VisualizedNeuralNetwork
             this.sideBar.Location = new System.Drawing.Point(0, 180);
             this.sideBar.Margin = new System.Windows.Forms.Padding(0);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(240, 470);
+            this.sideBar.Size = new System.Drawing.Size(240, 480);
             this.sideBar.TabIndex = 1;
             // 
             // topBar
@@ -129,7 +129,7 @@ namespace VisualizedNeuralNetwork
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(1100, 680);
+            this.ClientSize = new System.Drawing.Size(1100, 690);
             this.Controls.Add(this.panelControlHolder);
             this.Controls.Add(this.panelSide);
             this.Controls.Add(this.topBar);

@@ -127,7 +127,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\project-icon-network.png" />
   </ItemGroup>
@@ -145,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train-network.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

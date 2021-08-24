@@ -119,5 +119,15 @@ namespace VisualizedNeuralNetwork.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap train_network {
+            get {
+                object obj = ResourceManager.GetObject("train-network", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

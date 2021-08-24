@@ -17,8 +17,14 @@ namespace VisualizedNeuralNetwork
         public FormMain()
         {
             InitializeComponent();
+        }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
 
-            sideBar.AddPage(new NeuralNetworkPage(), "Neural Network", 
+            this.DoubleBuffered = true;
+
+            sideBar.AddPage(new NeuralNetworkPage(), "Neural Network",
                 Properties.Resources.network, panelPageHolder);
             sideBar.AddPage(new DataSetSelectionPage(), "Data Set", // TODO: change page
                 Properties.Resources.data_set, panelPageHolder);

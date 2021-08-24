@@ -51,9 +51,9 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
             this.neuralNetworkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.neuralNetworkButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neuralNetworkButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(240)))));
-            this.neuralNetworkButton.Image = global::VisualizedNeuralNetwork.Properties.Resources.network;
+            this.neuralNetworkButton.Image = global::VisualizedNeuralNetwork.Properties.Resources.train_network;
             this.neuralNetworkButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.neuralNetworkButton.Location = new System.Drawing.Point(590, 557);
+            this.neuralNetworkButton.Location = new System.Drawing.Point(590, 570);
             this.neuralNetworkButton.Name = "neuralNetworkButton";
             this.neuralNetworkButton.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.neuralNetworkButton.Size = new System.Drawing.Size(240, 60);
@@ -73,7 +73,7 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
             this.Controls.Add(this.panelNetworkVisualizationWindow);
             this.Name = "NeuralNetworkPage";
             this.Padding = new System.Windows.Forms.Padding(30, 0, 30, 30);
-            this.Size = new System.Drawing.Size(860, 650);
+            this.Size = new System.Drawing.Size(860, 660);
             this.ResumeLayout(false);
 
         }
