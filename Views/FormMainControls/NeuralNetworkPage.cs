@@ -9,8 +9,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using VisualizedNeuralNetwork.Classes.NeuralNetworkAlgorithm;
-using VisualizedNeuralNetwork.Classes.NetworkVisualizer;
+using VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm;
+using VisualizedNeuralNetwork.Models.NetworkVisualizer;
 
 namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {

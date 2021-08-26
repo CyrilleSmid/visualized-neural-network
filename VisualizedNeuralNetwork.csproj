@@ -47,62 +47,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\NetworkVisualizer.cs" />
-    <Compile Include="Controls\FormMainControls\DataSetSelectionPage.cs">
+    <Compile Include="Models\NetworkVisualizer.cs" />
+    <Compile Include="Views\FormMainControls\DataSetSelectionPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FormMainControls\DataSetSelectionPage.Designer.cs">
+    <Compile Include="Views\FormMainControls\DataSetSelectionPage.Designer.cs">
       <DependentUpon>DataSetSelectionPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FormMainControls\NeuralNetworkPage.cs">
+    <Compile Include="Views\FormMainControls\NeuralNetworkPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FormMainControls\NeuralNetworkPage.Designer.cs">
+    <Compile Include="Views\FormMainControls\NeuralNetworkPage.Designer.cs">
       <DependentUpon>NeuralNetworkPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FormMainControls\SettingsPage.cs">
+    <Compile Include="Views\FormMainControls\SettingsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\FormMainControls\SettingsPage.Designer.cs">
+    <Compile Include="Views\FormMainControls\SettingsPage.Designer.cs">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UserControls\SideBar.cs">
+    <Compile Include="Views\UserControls\SideBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UserControls\SideBar.Designer.cs">
+    <Compile Include="Views\UserControls\SideBar.Designer.cs">
       <DependentUpon>SideBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UserControls\TopBar.cs">
+    <Compile Include="Views\UserControls\TopBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UserControls\TopBar.Designer.cs">
+    <Compile Include="Views\UserControls\TopBar.Designer.cs">
       <DependentUpon>TopBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="Views\FormMainControls\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="Views\FormMainControls\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\NeuralNetwork.cs" />
+    <Compile Include="Models\NeuralNetwork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\FormMainControls\DataSetSelectionPage.resx">
+    <EmbeddedResource Include="Views\FormMainControls\DataSetSelectionPage.resx">
       <DependentUpon>DataSetSelectionPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FormMainControls\NeuralNetworkPage.resx">
+    <EmbeddedResource Include="Views\FormMainControls\NeuralNetworkPage.resx">
       <DependentUpon>NeuralNetworkPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FormMainControls\SettingsPage.resx">
+    <EmbeddedResource Include="Views\FormMainControls\SettingsPage.resx">
       <DependentUpon>SettingsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UserControls\SideBar.resx">
+    <EmbeddedResource Include="Views\UserControls\SideBar.resx">
       <DependentUpon>SideBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UserControls\TopBar.resx">
+    <EmbeddedResource Include="Views\UserControls\TopBar.resx">
       <DependentUpon>TopBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
+    <EmbeddedResource Include="Views\FormMainControls\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -149,5 +149,6 @@
   <ItemGroup>
     <None Include="Resources\train-network.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

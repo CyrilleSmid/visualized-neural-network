@@ -5,9 +5,9 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VisualizedNeuralNetwork.Classes.NeuralNetworkAlgorithm;
+using VisualizedNeuralNetwork.Models.NeuralNetworkAlgorithm;
 
-namespace VisualizedNeuralNetwork.Classes.NetworkVisualizer
+namespace VisualizedNeuralNetwork.Models.NetworkVisualizer
 {
     class NetworkVisualizer
     {
