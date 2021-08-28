@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
-    public partial class SettingsPage : UserControl
+    public partial class SettingsView : UserControl
     {
-        public SettingsPage()
+        public SettingsView()
         {
             InitializeComponent();
         }

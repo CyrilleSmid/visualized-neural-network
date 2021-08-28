@@ -48,23 +48,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\NetworkVisualizer.cs" />
-    <Compile Include="Views\FormMainControls\DataSetSelectionPage.cs">
+    <Compile Include="Presenters\INeuralNetworkView.cs" />
+    <Compile Include="Presenters\NeuralNetworkPresenter.cs" />
+    <Compile Include="Views\FormMain\DataSetSelectionView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\FormMainControls\DataSetSelectionPage.Designer.cs">
-      <DependentUpon>DataSetSelectionPage.cs</DependentUpon>
+    <Compile Include="Views\FormMain\DataSetSelectionView.Designer.cs">
+      <DependentUpon>DataSetSelectionView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormMainControls\NeuralNetworkPage.cs">
+    <Compile Include="Views\FormMain\NeuralNetworkView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\FormMainControls\NeuralNetworkPage.Designer.cs">
-      <DependentUpon>NeuralNetworkPage.cs</DependentUpon>
+    <Compile Include="Views\FormMain\NeuralNetworkView.Designer.cs">
+      <DependentUpon>NeuralNetworkView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormMainControls\SettingsPage.cs">
+    <Compile Include="Views\FormMain\SettingsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\FormMainControls\SettingsPage.Designer.cs">
-      <DependentUpon>SettingsPage.cs</DependentUpon>
+    <Compile Include="Views\FormMain\SettingsView.Designer.cs">
+      <DependentUpon>SettingsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\SideBar.cs">
       <SubType>UserControl</SubType>
@@ -78,23 +80,23 @@
     <Compile Include="Views\UserControls\TopBar.Designer.cs">
       <DependentUpon>TopBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormMainControls\FormMain.cs">
+    <Compile Include="Views\FormMain\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormMainControls\FormMain.Designer.cs">
+    <Compile Include="Views\FormMain\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\NeuralNetwork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\FormMainControls\DataSetSelectionPage.resx">
-      <DependentUpon>DataSetSelectionPage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FormMain\DataSetSelectionView.resx">
+      <DependentUpon>DataSetSelectionView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormMainControls\NeuralNetworkPage.resx">
-      <DependentUpon>NeuralNetworkPage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FormMain\NeuralNetworkView.resx">
+      <DependentUpon>NeuralNetworkView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormMainControls\SettingsPage.resx">
-      <DependentUpon>SettingsPage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FormMain\SettingsView.resx">
+      <DependentUpon>SettingsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\SideBar.resx">
       <DependentUpon>SideBar.cs</DependentUpon>
@@ -102,7 +104,7 @@
     <EmbeddedResource Include="Views\UserControls\TopBar.resx">
       <DependentUpon>TopBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormMainControls\FormMain.resx">
+    <EmbeddedResource Include="Views\FormMain\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
-    public partial class DataSetSelectionPage : UserControl
+    public partial class DataSetSelectionView : UserControl
     {
-        public DataSetSelectionPage()
+        public DataSetSelectionView()
         {
             InitializeComponent();
         }

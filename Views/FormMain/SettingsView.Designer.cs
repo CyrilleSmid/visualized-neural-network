@@ -1,7 +1,7 @@
 ﻿
 namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
-    partial class SettingsPage
+    partial class SettingsView
     {
         /// <summary> 
         /// Required designer variable.

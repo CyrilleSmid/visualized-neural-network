@@ -1,7 +1,7 @@
 ﻿
 namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
-    partial class NeuralNetworkPage
+    partial class NeuralNetworkView
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,20 +29,20 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NeuralNetworkPage));
-            this.panelNetworkVisualizationWindow = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NeuralNetworkView));
+            this.panelNetworkHolder = new System.Windows.Forms.Panel();
             this.neuralNetworkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panelNetworkVisualizationWindow
+            // panelNetworkHolder
             // 
-            this.panelNetworkVisualizationWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
-            this.panelNetworkVisualizationWindow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNetworkVisualizationWindow.Location = new System.Drawing.Point(30, 0);
-            this.panelNetworkVisualizationWindow.Name = "panelNetworkVisualizationWindow";
-            this.panelNetworkVisualizationWindow.Size = new System.Drawing.Size(800, 540);
-            this.panelNetworkVisualizationWindow.TabIndex = 0;
-            this.panelNetworkVisualizationWindow.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNetworkVisualizationWindow_Paint);
+            this.panelNetworkHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(39)))));
+            this.panelNetworkHolder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelNetworkHolder.Location = new System.Drawing.Point(30, 0);
+            this.panelNetworkHolder.Name = "panelNetworkHolder";
+            this.panelNetworkHolder.Size = new System.Drawing.Size(800, 540);
+            this.panelNetworkHolder.TabIndex = 0;
+            this.panelNetworkHolder.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNetworkVisualizationWindow_Paint);
             // 
             // neuralNetworkButton
             // 
@@ -65,14 +65,14 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
             this.neuralNetworkButton.UseVisualStyleBackColor = false;
             this.neuralNetworkButton.Click += new System.EventHandler(this.neuralNetworkButton_Click);
             // 
-            // NeuralNetworkPage
+            // NeuralNetworkView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(62)))));
             this.Controls.Add(this.neuralNetworkButton);
-            this.Controls.Add(this.panelNetworkVisualizationWindow);
-            this.Name = "NeuralNetworkPage";
+            this.Controls.Add(this.panelNetworkHolder);
+            this.Name = "NeuralNetworkView";
             this.Padding = new System.Windows.Forms.Padding(30, 0, 30, 30);
             this.Size = new System.Drawing.Size(860, 660);
             this.ResumeLayout(false);
@@ -81,7 +81,7 @@ namespace VisualizedNeuralNetwork.Controls.FormMainControls
 
         #endregion
 
-        private System.Windows.Forms.Panel panelNetworkVisualizationWindow;
+        private System.Windows.Forms.Panel panelNetworkHolder;
         private System.Windows.Forms.Button neuralNetworkButton;
     }
 }

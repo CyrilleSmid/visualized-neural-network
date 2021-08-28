@@ -24,11 +24,11 @@ namespace VisualizedNeuralNetwork
 
             this.DoubleBuffered = true;
 
-            sideBar.AddPage(new NeuralNetworkPage(), "Neural Network",
+            sideBar.AddPage(new NeuralNetworkView(), "Neural Network",
                 Properties.Resources.network, panelPageHolder);
-            sideBar.AddPage(new DataSetSelectionPage(), "Data Set",
+            sideBar.AddPage(new DataSetSelectionView(), "Data Set",
                 Properties.Resources.data_set, panelPageHolder);
-            sideBar.AddPage(new SettingsPage(), "Settings", 
+            sideBar.AddPage(new SettingsView(), "Settings",
                 Properties.Resources.settings, panelPageHolder, true);
         }
     }

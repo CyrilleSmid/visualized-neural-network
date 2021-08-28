@@ -1,7 +1,7 @@
 ﻿
 namespace VisualizedNeuralNetwork.Controls.FormMainControls
 {
-    partial class DataSetSelectionPage
+    partial class DataSetSelectionView
     {
         /// <summary> 
         /// Required designer variable.
